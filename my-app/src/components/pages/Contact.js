@@ -1,0 +1,91 @@
+import React from 'react';
+const styles = {
+  card: {
+      marginTop: '100px',
+      width: '80%',
+  },
+  show:{
+    display:'block'
+  },
+  hide:
+  {
+    display:'none'
+  }
+};
+export default function Contact() {
+  return (
+    <div>
+     <section style={styles.card} className='card mx-auto bg-white p-5 rounded-lg shadow' id="contact">
+    <div className="container wow fadeInUp text-center">
+      <div className="row">
+        <div className="col-md-12">
+          <h3 className="section-title">Contact</h3>
+        </div>
+      </div>
+<div style={styles.hide} id="sendmessage">Your message has been sent. Thank you!</div>
+      <div className="row">
+        <div className="col-md-5 col-md-push-2 mx-auto" id='formcard'>
+          <div className="form">
+            
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" className="contactForm">
+              <div className="form-group">
+                <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
+                <div className="validation"></div>
+              </div>
+              <div className="form-group">
+                <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
+                <div className="validation"></div>
+              </div>
+              <div className="form-group">
+                <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
+                <div className="validation"></div>
+              </div>
+              <div className="form-group">
+                <textarea className="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
+                <div className="validation"></div>
+              </div>
+              <div>
+                <h4 className='valid'></h4>
+              </div>
+               </form>
+               <div className="text-center">
+               <button
+  onClick={() => {
+    const formControls = document.querySelectorAll('.form-control');
+    let allValid = true;
+
+    formControls.forEach((control) => {
+      if (!control.value) {
+        allValid = false;
+        control.className = 'form-control is-invalid'
+      } else{
+        control.className = 'form-control is-valid'
+      }
+    });
+
+    if (allValid) {
+      document.querySelector('.valid').textContent = '';
+      document.getElementById('sendmessage').style.display ="block"
+      document.getElementById('formcard').style.display='none'
+    } else {
+      document.querySelector('.valid').textContent = 'Complete form now!!!';
+    }
+  }}
+  className="btn btn-dark"
+>
+  Send Message
+</button>
+
+</div>
+
+           
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    </div>
+  );
+}
