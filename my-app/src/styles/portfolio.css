@@ -1,0 +1,28 @@
+
+.jo{
+    background-color: aqua;
+}
+.profileimg{
+    width: 90px;
+    border: solid 1px;
+    border-radius: 100%;
+    border-color:black;
+    margin: 20px;
+}
+.image {
+    width: 90%;
+    height: 80%;
+    margin: 20px;
+    border: solid 10px;
+    border-color:black;
+}
+.imgref{
+    opacity: 1;
+   display: block;
+    top: -200px;
+    position: relative;
+}
+
+.image:hover .imgref{
+opacity: 0 !important;
+}
