@@ -2,7 +2,7 @@ import React from 'react';
 import profilepic from '../../images/profilepic.webp'
 export default function About() {
   return (
-    <div>
+    <div className='card mx-auto bg-white p-5 m-3 rounded-lg shadow' >
       <h1>About Me</h1>
       <img className='profileimg' src={profilepic}></img>
       <p>

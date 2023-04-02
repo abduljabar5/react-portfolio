@@ -15,7 +15,7 @@ const styles = {
 export default function Contact() {
   return (
     <div>
-     <section style={styles.card} className='card mx-auto bg-white p-5 rounded-lg shadow' id="contact">
+     <section style={styles.card} className='card mx-auto bg-white p-5 rounded-lg shadow' >
     <div className="container wow fadeInUp text-center">
       <div className="row">
         <div className="col-md-12">
@@ -37,10 +37,10 @@ export default function Contact() {
                 <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
                 <div className="validation"></div>
               </div>
-              <div className="form-group">
+              {/* <div className="form-group">
                 <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
                 <div className="validation"></div>
-              </div>
+              </div> */}
               <div className="form-group">
                 <textarea className="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
                 <div className="validation"></div>

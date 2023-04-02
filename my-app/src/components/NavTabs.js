@@ -6,23 +6,13 @@ function NavTabs({ currentPage, handlePageChange }) {
   return (
 <nav className="navbar navbar-expand-lg bg-body-tertiary">
 <div className="container-fluid">
-  <a className="navbar-brand" href="#">Navbar</a>
+  <a className="navbar-brand" href="#">Abduljabar</a>
   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
   <div className="collapse navbar-collapse" id="navbarNav">
-  <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a
-          href="#home"
-          onClick={() => handlePageChange('Home')}
-          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-        >
-          Home
-        </a>
-      </li>
+  <ul className="nav nav-pills nav-justified">
+      
       <li className="nav-item">
         <a
           href="#about"
@@ -51,6 +41,17 @@ function NavTabs({ currentPage, handlePageChange }) {
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#Resume"
+          onClick={() => handlePageChange('Resume')}
+          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
+          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
+          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
+        >
+          Resume
         </a>
       </li>
     </ul>
