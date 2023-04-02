@@ -37,10 +37,6 @@ export default function Contact() {
                 <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
                 <div className="validation"></div>
               </div>
-              {/* <div className="form-group">
-                <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                <div className="validation"></div>
-              </div> */}
               <div className="form-group">
                 <textarea className="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
                 <div className="validation"></div>
@@ -54,22 +50,37 @@ export default function Contact() {
   onClick={() => {
     const formControls = document.querySelectorAll('.form-control');
     let allValid = true;
-
+    let emailValid = true;
+    const email = document.getElementById('email').value;
+    function isValidEmail(email) {
+      // This regular expression checks if an email is valid
+      const regex = /.+@.+\..+/;
+      return regex.test(email);
+  }
     formControls.forEach((control) => {
       if (!control.value) {
         allValid = false;
         control.className = 'form-control is-invalid'
+      } else  if (!isValidEmail(email)) {
+        emailValid = false;
+        control.className = 'form-control is-invalid'
+        document.querySelector('.valid').textContent = 'Invalid Email :{';
       } else{
         control.className = 'form-control is-valid'
       }
     });
 
-    if (allValid) {
+    if (allValid && emailValid) {
       document.querySelector('.valid').textContent = '';
       document.getElementById('sendmessage').style.display ="block"
       document.getElementById('formcard').style.display='none'
-    } else {
+    } else if (!allValid) {
       document.querySelector('.valid').textContent = 'Complete form now!!!';
+    } else if (!emailValid){
+      formControls.forEach((control) => {
+        control.className = 'form-control is-valid'
+      })
+      document.getElementById('email').className = 'form-control is-invalid'
     }
   }}
   className="btn btn-dark"
