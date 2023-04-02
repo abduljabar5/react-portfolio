@@ -1,13 +1,13 @@
 import React from 'react';
-import icon from '../../images/download.svg'
+import icon from '../../images/download.svg';
 
 export default function Resume() {
-  const resumeUrl = '/images/Resume.pdf';
+  const resumeUrl = process.env.PUBLIC_URL + '/images/Resume.pdf';
 
   return (
     <div className='resumecard card mx-auto rounded-lg shadow'>
       <h1>Resume</h1>
-      <a className='download' href={resumeUrl} download><img className='icon' src={icon}></img></a>
+      <a className='download' href={resumeUrl} download><img className='icon' src={icon} alt="Download Resume"></img></a>
      
       <ul>
         <h3>front-end proficiencies</h3>
