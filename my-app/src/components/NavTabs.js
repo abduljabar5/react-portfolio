@@ -1,63 +1,70 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
-function NavTabs({ currentPage, handlePageChange }) {
+import menu from '../images/menu.svg'
+function NavTabs() {
+  useEffect(() => {
+    const navbar = document.querySelector('.navigationbar');
+    const textcolor = document.getElementById('textcolor');
+
+    const handleScroll = () => {
+      if (navbar && window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+        if (textcolor) {
+          textcolor.style.color = 'white'
+        }
+      } else if (navbar) {
+        navbar.classList.remove('scrolled');
+        if (textcolor) {
+          textcolor.style.color = '' // Reset to default color
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
-<nav className="navbar navbar-expand-lg bg-body-tertiary">
-<div className="container-fluid">
-  <a className="navbar-brand" href="#">Abduljabar</a>
-  <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
-  <div className="collapse navbar-collapse" id="navbarNav">
-  <ul className="nav nav-pills nav-justified">
-      
-      <li className="nav-item">
-        <a
-          href="#about"
-          onClick={() => handlePageChange('About')}
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
-        >
-          About
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Portfolio"
-          onClick={() => handlePageChange('Portfolio')}
-          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
-        >
-          Projects
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#contact"
-          onClick={() => handlePageChange('Contact')}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-        >
-          Contact
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Resume"
-          onClick={() => handlePageChange('Resume')}
-          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-        >
-          Resume
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-</nav>
+ <main>
+      <nav className="navbar navbar-expand-lg bg-body-none fixed-top  navbarcontainer navigationbar">
+       
+        <div id="logo" className="pull-left">
+           <h4><a href="#hero">Abduljabar</a> </h4>
+       </div>
+          <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
+            aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation"><img src={menu}></img>
+           </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="nav-menu">
+             <li className="menu-active"><a href="/">Home</a></li>
+             <li><a href="/#about">About</a></li>
+             <li><a href="/#Technology">Technology</a></li>
+             <li><a href="/Projects">Projects</a></li>
+            <li><a href="/contact">Contact Me</a></li>
+             <li><a href="/resume">Resume</a></li>
+           </ul>
+          </div>
+       
+      </nav><div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="offcanvasNavLabel">Menu</h5>
+          <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div className="offcanvas-body">
+          <div className="navbar-nav">
+            <a className="nav-link text-center active" aria-current="page" href="/#about">About</a>
+            <div className="custom-separator mx-auto bg-primary"></div>
+            <a className="nav-link text-center" href="/#technology">Technologies</a>
+            <a className="nav-link text-center disabled" href="/projects">Projects</a>
+            <a className="nav-link text-center disabled" href="/contact">Contact Me</a>
+            <a className="nav-link text-center" href="/reviews">Resume</a>
+          </div>
+        </div>
+      </div>
+      </main>
   );
 }
 

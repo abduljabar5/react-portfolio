@@ -1,46 +1,69 @@
 import React from 'react';
-import pictureone from '../../images/pic.png';
-import picturetwo from '../../images/screens.jpg';
+import pictureoe from '../../images/pic.png';
+import picturetw from '../../images/screens.jpg';
 import '../../styles/portfolio.css';
 
 export default function Portfolio() {
   return (
-    <div>
-      <h1 className='jo'>Portfolio</h1>
-      <div className="container text-center">
-  <div className="row row-cols-2">
-    <div className="col">
-      <div>
-        <img className='image' id='image' src= {pictureone}></img>
-        <div className='imgref' id='imgref'>
-        <a className='btn m-3 btn-dark' href='https://powerful-sands-21433.herokuapp.com/' target="_blank">live link</a>
-        <a className='btn m-3 btn-dark' href='https://github.com/abduljabar5/gym-homie-v-2' target="_blank">github</a>
+    <section id="portfolio">
+    <div className="container wow fadeInUp">
+      <div className="row">
+        <div className="col-md-12">
+          <h3 className="section-title">Portfolio</h3>
+          <div className="section-title-divider"></div>
+          <p className="section-description">main projects</p>
         </div>
+      </div>
+
+      <div className="row">
+        <div className="col-md-3">
+          <a className="portfolio-item" href="">
+            <div className="details">
+              <h4>Portfolio 1</h4>
+              <div className='mogo'>
+              <span id='code'><a className='btn m-3 btn-dark' href='https://powerful-sands-21433.herokuapp.com/' target="_blank">live link</a></span>
+              <span id='live'><a className='btn m-3 btn-dark' href='https://github.com/abduljabar5/gym-homie-v-2' target="_blank">github</a></span>
+            </div>
+            </div>
+          </a>
         </div>
-    </div>
-    <div className="col">
-   <img className='image' src={picturetwo}></img> 
-   <div className='imgref' id='imgref'>
-        <a className='btn m-3 btn-dark' href='https://abduljabar5.github.io/eventster/' target="_blank">live link</a>
-        <a className='btn m-3 btn-dark' href='https://github.com/abduljabar5/eventster' target="_blank">github</a>
+
+        <div className="col-md-3">
+          <a className="portfolio-item"href="">
+            <div className="details">
+              <h4>Portfolio 2</h4>
+              <span></span>
+            </div>
+          </a>
         </div>
-    </div>
-    <div className="col">
-      <img className='image' src='https://w0.peakpx.com/wallpaper/184/644/HD-wallpaper-css-coding-ultra-computers-hardware-internet-laptop-working-technology-computer-code-programming-software-development-workplace-website-sourcecode.jpg'></img>
-      <div className='imgref' id='imgref'>
-        <a className='btn m-3 btn-dark' href='https://powerful-sands-21433.herokuapp.com/' target="_blank">live link</a>
-        <a className='btn m-3 btn-dark' href='https://github.com/abduljabar5/gym-homie-v-2' target="_blank">github</a>
+
+        <div className="col-md-3">
+          <a className="portfolio-item" href="">
+            <div className="details">
+              <h4>Portfolio 3</h4>
+              <span></span>
+            </div>
+          </a>
         </div>
-    </div>
-    <div className="col">
-      <img className='image' src='https://w0.peakpx.com/wallpaper/40/229/HD-wallpaper-typetrail-media-business-analytics-content-marketing-digital-marketing-email-marketing-local-seo-mobile-marketing-reputation-management-social-media-marketing-web-development-website-design.jpg'></img>
-      <div className='imgref' id='imgref'>
-        <a className='btn m-3 btn-dark' href='https://powerful-sands-21433.herokuapp.com/' target="_blank">live link</a>
-        <a className='btn m-3 btn-dark' href='https://github.com/abduljabar5/gym-homie-v-2' target="_blank">github</a>
+
+        <div className="col-md-3">
+          <a className="portfolio-item"  href="">
+            <div className="details">
+              <h4>Portfolio 4</h4>
+              <span></span>
+            </div>
+          </a>
         </div>
+        <div className="col-md-3">
+          <a className="portfolio-item"  href="">
+            <div className="details">
+              <h4>Portfolio 4</h4>
+              <span></span>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-    </div>
+  </section>
   );
 }

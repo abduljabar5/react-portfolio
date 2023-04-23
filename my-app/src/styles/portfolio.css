@@ -1,6 +1,23 @@
-.navbar{
-    display: flex !important;
+
+a {
+    color: #ffffff;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
 }
+ .scrolled {
+    /* background: linear-gradient(60deg, #50817E 0%, #313131 40%, #313131 61%, #50817E 100%); */
+  background-color: rgb(0, 0, 0); 
+   opacity: .8;
+  top: 0;
+  z-index: 1020;
+  
+  }
 .jo{
     background-color: aqua;
 }
@@ -48,3 +65,519 @@ display: none !important;
 .icon{
     width: 50px;
 }
+/*--------------------------------------------------------------
+# Welcome
+--------------------------------------------------------------*/
+#hero {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/4k_dark_light_colorful_nature_wallpaper_uhd_by_skullbreaker000_dejx2to-fullview.jpg) top center;
+    background-size: cover;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+  }
+  
+  #hero .hero-logo {
+    margin: 20px auto;
+    width: 230px;
+
+  }
+  
+  #hero .hero-logo img {
+    max-width: 100%;
+  }
+  
+  #hero .hero-container {
+    background: rgba(0, 0, 0, 0.8);
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  #hero h1 {
+    margin: 30px 0 10px 0;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  
+  #hero h2 {
+    color: #999;
+    margin-bottom: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    #hero h2 {
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+    #hero h2 .rotating {
+      display: block;
+    }
+  }
+  
+  #hero .rotating > .animated {
+    display: inline-block;
+  }
+  
+  #hero .actions a {
+    display: inline-block;
+    padding: 0px;
+    border-radius: 100%;
+    margin: 10px;
+  }
+  #hero .actions a:hover{
+    scale: 1.5;
+    padding: 10px;
+      background-color: beige;
+  
+  }
+  #hero .btn-get-started {
+    background: #03C4EB;
+    border: 2px solid #03C4EB;
+    color: #fff;
+  }
+  
+  #hero .btn-get-started:hover {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  
+  #hero .btn-services {
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  
+  #hero .btn-services:hover {
+    background: #03C4EB;
+    border: 2px solid #03C4EB;
+  }
+  
+  /*  */
+  /* .wow{
+    width: 1000px !important;
+  } */
+  /* Sections Common
+--------------------------------*/
+.section-title {
+    font-size: 32px;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .section-description {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-title-divider {
+    width: 50px;
+    height: 3px;
+    background: #03C4EB;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .actions img {
+    width: 40px;
+    color: transparent;
+    vertical-align: middle;
+  
+  }
+  /* Get Started Section
+  --------------------------------*/
+  
+  #about {
+    background: #fff;
+    padding: 80px 0;
+  }
+  
+  #about .about-img {
+    overflow: hidden;
+  }
+  
+  #about .about-img img {
+    max-width: 100%;
+  }
+  .portfolio-item{
+    background: url(../images/4k_dark_light_colorful_nature_wallpaper_uhd_by_skullbreaker000_dejx2to-fullview.jpg);
+  }
+  #portfolio {
+  background: #fff;
+  padding: 80px 0;
+}
+
+#portfolio .portfolio-item {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 260px;
+  width: 100%;
+  display: table;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#portfolio .portfolio-item .details {
+  height: 260px;
+  background: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  opacity: 0;
+  transition: 0.3s;
+  text-align: center;
+}
+.mogo{
+    display: flex;
+}
+
+#portfolio .portfolio-item .details h4 {
+  font-size: 16px;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translate3d(0, -15px, 0);
+  font-weight: 700;
+  color: #333333;
+}
+
+#portfolio .portfolio-item .details   #code{
+  display: block;
+  color: #666666;
+  font-size: 13px;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translate3d(-15px, 0, 0);
+}
+#portfolio .portfolio-item .details  #live {
+    display: block;
+    color: #666666;
+    font-size: 13px;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translate3d(15px, 0, 0);
+  }
+
+#portfolio .portfolio-item:hover .details {
+  opacity: 0.8;
+}
+
+#portfolio .portfolio-item:hover .details h4 {
+  transform: translate3d(0, 0, 0);
+}
+
+#portfolio .portfolio-item:hover .details  #live{
+  transform: translate3d(0, 0, 0);
+}
+#portfolio .portfolio-item:hover .details  #code{
+    transform: translate3d(0, 0, 0);
+  }
+
+  
+  @media (max-width: 768px) {
+    #about .about-img {
+      height: auto;
+    }
+    #about .about-img img {
+      margin-left: 0;
+      padding-bottom: 30px;
+    }
+  }
+  
+  #about .about-content {
+    background: #fff;
+  }
+  
+  #about .about-title {
+    color: #333;
+    font-weight: 700;
+    font-size: 28px;
+  }
+  
+  #about .about-text {
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+  
+  #about .about-text:last-child {
+    margin-bottom: 0;
+  }
+  /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.navbarcontainer{
+    display: flex;
+    justify-content: space-between !important;
+    position: fixed;
+    transition: 1s ;
+    width: 100%;
+    padding: 20px;
+}
+.nav-menu, .nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+  }
+  
+  .nav-menu li {
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .nav-menu > li {
+    float: left;
+  }
+  
+  .nav-menu li:hover > ul,
+  .nav-menu li.sfHover > ul {
+    display: block;
+  }
+  
+  .nav-menu ul ul {
+    top: 0;
+    left: 100%;
+  }
+  
+  .nav-menu ul li {
+    min-width: 180px;
+  }
+  .navbar-collapse{
+    justify-content: flex-end;
+  }
+  
+  /* Nav Menu Container */
+  #nav-menu-container {
+    float: right;
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 768px) {
+    #nav-menu-container {
+      display: none;
+    }
+  }
+  
+  /* Nav Menu Styling */
+  .nav-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  /* .nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
+    color: #03C4EB;
+  } */
+  
+  .nav-menu ul {
+    margin: 4px 0 0 15px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+  }
+  
+  .nav-menu ul li {
+    background: #fff;
+    border-top: 1px solid #f4f4f4;
+  }
+  
+  .nav-menu ul li:first-child {
+    border-top: 0;
+  }
+  
+  .nav-menu ul li:hover {
+    background: #f6f6f6;
+  }
+  
+  .nav-menu ul li a {
+    color: #333;
+  }
+  
+  .nav-menu ul ul {
+    margin: 0;
+  }
+  #logo h4 a{
+   font-family: 'Arizonia', cursive; 
+   color: gold; 
+   text-decoration: none; 
+   size: 15px;
+   margin: 10px 50px;
+  }
+  /* Mobile Nav Toggle */
+  #mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: 20px 20px 0 0;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    display: none;
+    transition: all 0.4s;
+    outline: none;
+  }
+  
+  #mobile-nav-toggle i {
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    #mobile-nav-toggle {
+      display: inline;
+    }
+  }
+  
+  /* Mobile Nav Styling */
+  #mobile-nav {
+    position: fixed;
+    top: 0;
+    padding-top: 18px;
+    bottom: 0;
+    z-index: 998;
+    background: rgba(0, 0, 0, 0.9);
+    left: -260px;
+    width: 260px;
+    overflow-y: auto;
+    transition: 0.4s;
+  }
+  
+  #mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  #mobile-nav ul li {
+    position: relative;
+  }
+  
+  #mobile-nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 10px 22px 10px 15px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    outline: none;
+  }
+  
+  #mobile-nav ul li a:hover {
+    color: #fff;
+  }
+  
+  #mobile-nav ul li li {
+    padding-left: 30px;
+  }
+  
+  #mobile-nav ul .menu-has-children i {
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* #mobile-nav ul .menu-has-children i.fa-chevron-up {
+    color: #03C4EB;
+  } */
+  
+  #mobile-nav ul .menu-item-active {
+    color: #03C4EB;
+  }
+  
+  #mobile-body-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+  }
+  
+  /* Mobile Nav body classes */
+  body.mobile-nav-active {
+    overflow: hidden;
+  }
+  
+  body.mobile-nav-active #mobile-nav {
+    left: 0;
+  }
+  
+  body.mobile-nav-active #mobile-nav-toggle {
+    color: #fff;
+  }
+  /*  */
+ 
+  
+  #services .service-item {
+    margin-bottom: 20px;
+  }
+  
+
+  
+  #services .service-icon i {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  #services .service-item:hover .service-icon {
+    background: #fff;
+  }
+ 
+  
+  #services .service-title {
+    margin-left: 80px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    
+  }
+  .service-title{
+   
+    display: flex;
+  }
+  .service-title img{
+    margin-right: auto!important; 
+    margin-left: auto!important;
+     width: 100px;
+  }
+  #services .service-title a {
+    color: #111;
+  }
+  
+  #services .service-description {
+    margin-left: 80px;
+    line-height: 24px;
+    text-align: center!important;
+  }
