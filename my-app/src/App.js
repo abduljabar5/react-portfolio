@@ -11,27 +11,27 @@ import Projects from './components/pages/Portfolio'
 function App() {
     return (
       <>
-        <Router>
+        <Router basename="/">
             <Navbar />
             <Routes>
               <Route 
-                path="/react-portfolio" 
+                path="/" 
                 element={<Home />}
               />
               <Route 
-                path="/react-portfolio/contact" 
+                path="/contact" 
                 element={<Contact />}
               />
                <Route 
-                path="/react-portfolio/resume" 
+                path="/resume" 
                 element={<Resume />}
               />
               <Route 
-                path="/react-portfolio/projects" 
+                path="/projects" 
                 element={<Projects />}
               />
               <Route 
-                path="/react-portfolio/*"
+                path="/*"
                 element={<NotFound />}
               />
             </Routes>
