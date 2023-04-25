@@ -4,6 +4,7 @@ import resumeUrl from '../../images/Resume.pdf'
 export default function Resume() {
 
   return (
+    <div className='resumepage'>
     <div className='resumecard card mx-auto rounded-lg shadow'>
       <h1>Resume</h1>
       <a className='download' href={resumeUrl} target="_blank" download = "My_File.pdf" ><img className='icon' src={icon} alt="Download Resume"></img></a>
@@ -28,6 +29,7 @@ export default function Resume() {
         <li>REST</li>
         <li>GraphQL</li>
       </ul>
+    </div>
     </div>
   );
 }

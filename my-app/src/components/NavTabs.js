@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import menu from '../images/menu.svg'
+import menu from '../images/navbutton.svg'
 function NavTabs() {
   useEffect(() => {
     const navbar = document.querySelector('.navigationbar');
@@ -34,17 +34,17 @@ function NavTabs() {
         <div id="logo" className="pull-left">
            <h4><a href="#hero">Abduljabar</a> </h4>
        </div>
-          <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
-            aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation"><img src={menu}></img>
-           </button>
+          <a className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
+            aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation"><img className='navbutton' src={menu}></img>
+           </a>
           <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="nav-menu">
-             <li className="menu-active"><a href="/">Home</a></li>
-             <li><a href="/#about">About</a></li>
-             <li><a href="/#Technology">Technology</a></li>
-             <li><a href="/Projects">Projects</a></li>
-            <li><a href="/contact">Contact Me</a></li>
-             <li><a href="/resume">Resume</a></li>
+             <li className="menu-active"><a href="/react-portfolio/">Home</a></li>
+             <li><a href="/react-portfolio/#about">About</a></li>
+             <li><a href="/react-portfolio/#Technology">Technology</a></li>
+             <li><a href="/react-portfolio/Projects">Projects</a></li>
+            <li><a href="/react-portfolio/contact">Contact Me</a></li>
+             <li><a href="/react-portfolio/resume">Resume</a></li>
            </ul>
           </div>
        
@@ -55,12 +55,12 @@ function NavTabs() {
         </div>
         <div className="offcanvas-body">
           <div className="navbar-nav">
-            <a className="nav-link text-center active" aria-current="page" href="/#about">About</a>
+            <a className="nav-link text-center active" aria-current="page" href="/react-portfolio/#about">About</a>
             <div className="custom-separator mx-auto bg-primary"></div>
-            <a className="nav-link text-center" href="/#technology">Technologies</a>
-            <a className="nav-link text-center disabled" href="/projects">Projects</a>
-            <a className="nav-link text-center disabled" href="/contact">Contact Me</a>
-            <a className="nav-link text-center" href="/reviews">Resume</a>
+            <a className="nav-link text-center" href="/react-portfolio/#technology">Technologies</a>
+            <a className="nav-link text-center" href="/react-portfolio/projects">Projects</a>
+            <a className="nav-link text-center" href="/react-portfolio/contact">Contact Me</a>
+            <a className="nav-link text-center" href="/react-portfolio/resume">Resume</a>
           </div>
         </div>
       </div>

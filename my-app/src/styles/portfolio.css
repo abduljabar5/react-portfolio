@@ -1,9 +1,9 @@
 
-a {
-    color: #ffffff;
+/* .menu-active li a {
+    color: #000000;
     transition: 0.5s;
     text-decoration: none;
-  }
+  } */
 
 .nav {
     display: flex;
@@ -50,9 +50,18 @@ display: none !important;
     filter: grayscale(0);
     scale: 2;
 }
+.resumepage{
+    background-image: url(../images/resumepic.jpeg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  padding: 80px 0;
+}
 .resumecard{
     max-width: 500px;
     margin-top: 100px;
+  
 }
 .resumecard li{
     list-style: circle;
@@ -64,6 +73,27 @@ display: none !important;
 }
 .icon{
     width: 50px;
+}
+.containerBox{
+    padding: 48px 20px;
+    width: 50%;
+}
+@media (max-width: 992px) {
+    .containerBox{
+        padding: 5px;
+        width: 100%;
+    }
+}
+.infobackground{
+    /* background-image: url(../images/infobackground.jpeg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(0, 0, 0);
 }
 /*--------------------------------------------------------------
 # Welcome
@@ -141,6 +171,7 @@ display: none !important;
     padding: 0px;
     border-radius: 100%;
     margin: 10px;
+    transition: .5s;
   }
   #hero .actions a:hover{
     scale: 1.5;
@@ -220,26 +251,63 @@ display: none !important;
   .portfolio-item{
     background: url(../images/4k_dark_light_colorful_nature_wallpaper_uhd_by_skullbreaker000_dejx2to-fullview.jpg);
   }
+  .project1{
+    background: url(../images/project2.png);
+  }
+  .project2{
+    background: url(../images/ttcsscreen.png);
+  }
+  @media (min-width: 1024px) {
+    .project1
+    {
+      background-attachment: fixed;
+    }
+  }
+  
   #portfolio {
-  background: #fff;
+    
+    background-image: url(../images/pexels-ann-h-1762851.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   padding: 80px 0;
+  padding-top: 200px;
 }
-
+#contact {
+    
+    background-image: url(../images/contactbg.jpeg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  padding: 80px 0;
+  padding-top: 200px;
+}
+@media (min-width: 768px) {
+.lessimportent{
+    width: 50%;
+}
+}
+.main-project{
+width: 100%;
+}
 #portfolio .portfolio-item {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 260px;
+  height: 460px;
   width: 100%;
   display: table;
   overflow: hidden;
   margin-bottom: 30px;
+  border-radius: 15px;
 }
 
 #portfolio .portfolio-item .details {
   height: 260px;
-  background: #fff;
+  background: #100f0f;
   display: table-cell;
   vertical-align: middle;
   opacity: 0;
@@ -248,6 +316,7 @@ display: none !important;
 }
 .mogo{
     display: flex;
+    justify-content: center;
 }
 
 #portfolio .portfolio-item .details h4 {
@@ -255,7 +324,7 @@ display: none !important;
   transition: transform 0.3s, opacity 0.3s;
   transform: translate3d(0, -15px, 0);
   font-weight: 700;
-  color: #333333;
+  color: #ffffff;
 }
 
 #portfolio .portfolio-item .details   #code{
@@ -272,6 +341,14 @@ display: none !important;
     transition: transform 0.3s, opacity 0.3s;
     transform: translate3d(15px, 0, 0);
   }
+  #portfolio .portfolio-item .details  #preview {
+    display: block;
+    color: #666666;
+    font-size: 13px;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translate3d(0, 0px, 0);
+    opacity: 0;
+  }
 
 #portfolio .portfolio-item:hover .details {
   opacity: 0.8;
@@ -287,7 +364,10 @@ display: none !important;
 #portfolio .portfolio-item:hover .details  #code{
     transform: translate3d(0, 0, 0);
   }
-
+  #portfolio .portfolio-item:hover .details  #preview{
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
   
   @media (max-width: 768px) {
     #about .about-img {
@@ -321,6 +401,9 @@ display: none !important;
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Nav Menu Essentials */
+.navbutton{
+    width: 35px;
+}
 .navbarcontainer{
     display: flex;
     justify-content: space-between !important;

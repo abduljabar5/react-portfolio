@@ -10,36 +10,34 @@ import Contact from './components/pages/Contact'
 import Projects from './components/pages/Portfolio'
 function App() {
     return (
-      <div>
-        
+      <>
         <Router>
-  
             <Navbar />
             <Routes>
               <Route 
-                path="/" 
+                path="/react-portfolio" 
                 element={<Home />}
               />
               <Route 
-                path="/contact" 
+                path="/react-portfolio/contact" 
                 element={<Contact />}
               />
                <Route 
-                path="/resume" 
+                path="/react-portfolio/resume" 
                 element={<Resume />}
               />
               <Route 
-                path="/projects" 
+                path="/react-portfolio/projects" 
                 element={<Projects />}
               />
               <Route 
-                path="/*"
+                path="/react-portfolio/*"
                 element={<NotFound />}
               />
             </Routes>
+             <Footer />
         </Router>
-        <Footer />
-     </div>
+     </>
     );
   }
   

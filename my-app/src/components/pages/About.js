@@ -66,7 +66,7 @@ export default function About() {
         <div className="col-md-12">
           <h3 className="section-title">Technologies learned</h3>
           <div className="section-title-divider"></div>
-          <p className="section-description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+          <p className="section-description"></p>
         </div>
       </div>
       <div className="row">

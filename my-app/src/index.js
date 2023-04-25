@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'; // import from react-dom/client i
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/js/src/offcanvas';
+import 'bootstrap/js/src/modal';
 import './styles/portfolio.css'
 import App from './App';
 

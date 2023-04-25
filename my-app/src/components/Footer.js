@@ -6,7 +6,7 @@ import icon3 from '../images/stackoverflow.svg'
 const styles = {
     footer: {
         position: 'relative',
-        bottom: '-370px',
+        // bottom: '-370px',
         padding: '5rem 0',
         width: '100%'
     },
