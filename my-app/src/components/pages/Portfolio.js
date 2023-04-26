@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import gymgif from '../../images/giphy.gif';
 
-export default function Portfolio() {
+ function Portfolio() {
   return (
     
     <section id="portfolio">
@@ -90,3 +90,4 @@ export default function Portfolio() {
   
   );
 }
+export default Portfolio;
