@@ -19,7 +19,7 @@ function App() {
                 element={<Home />}
               />
               <Route 
-                path="/contact" 
+                path="/react-portfolio/contact" 
                 element={<Contact />}
               />
                <Route 
