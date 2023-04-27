@@ -15,11 +15,11 @@ function App() {
             <Navbar />
             <Routes>
               <Route 
-                path="/" 
+                path="/react-portfolio/" 
                 element={<Home />}
               />
               <Route 
-                path="/eact-portfolio/contact" 
+                path="/react-portfolio/contact" 
                 element={<Contact />}
               />
                <Route 
