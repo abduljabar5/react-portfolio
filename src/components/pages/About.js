@@ -38,13 +38,13 @@ export default function About() {
         </div>
 
         <h1>{text}</h1>
-        <h2>A SoftWare Engineer</h2>
+        <h2>A Web Developer</h2>
 
         <div className="actions">
           {/* <a href="https://github.com/abduljabar5" target="_blank" ><img src={github} alt=""></img></a> */}
-          <a href="https://www.linkedin.com/in/abduljabar-nur-11b18b257/" target="_blank" ><img src={github} alt="linkedin icon"></img></a>
+          <a href="https://github.com/abduljabar5" target="_blank" ><img src={github} alt="github icon"></img></a>
           <a href="https://www.linkedin.com/in/abduljabar-nur-11b18b257/" target="_blank" ><img src={linkedin} alt="linkedin icon"></img></a>
-          <a href="mailto:abduljabar.nur.8@gmail.com"><img src={gmail} alt=""></img></a>
+          <a href="mailto:abduljabar.nur.8@gmail.com"><img src={gmail} alt="gmail icon"></img></a>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@ export default function About() {
    </div>
  </section>
  <section id="Technology">
-    <div className="container wow fadeInUp">
+    <div className="container technology">
       <div className="row">
         <div className="col-md-12">
           <h3 className="section-title">Technologies learned</h3>

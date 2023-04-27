@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 import menu from '../images/navbutton.svg'
-function NavTabs() {
+function NavTabs({ currentPage, handlePageChange }) {
   useEffect(() => {
     const navbar = document.querySelector('.navigationbar');
     const textcolor = document.getElementById('textcolor');
@@ -40,16 +40,52 @@ function NavTabs() {
            </a>
           <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="nav-menu">
-             <li className="menu-active"><Link to="/">Home</Link></li>
-             <li><Link to ="/#about">About</Link></li>
-             <li><Link to="/#Technology">Technology</Link></li>
-             <li><Link to="/Projects">Projects</Link></li>
-            <li>< Link to="contact">Contact Me</Link></li>
-             <li><Link to="/resume">Resume</Link></li>
+          <li className="nav-item">
+        <a
+          href="#about"
+          onClick={() => handlePageChange('About')}
+          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+        >
+          About
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#Portfolio"
+          onClick={() => handlePageChange('Portfolio')}
+          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
+        >
+          Projects
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#contact"
+          onClick={() => handlePageChange('Contact')}
+          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+        >
+          Contact
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#Resume"
+          onClick={() => handlePageChange('Resume')}
+          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
+          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
+          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
+        >
+          Resume
+        </a>
+      </li>
            </ul>
           </div>
        
-      </nav><div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+      </nav>
+      {/* <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasNavLabel">Menu</h5>
           <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -64,7 +100,7 @@ function NavTabs() {
             <Link className="nav-link text-center" to="/resume">Resume</Link>
           </div>
         </div>
-      </div>
+      </div> */}
       </main>
   );
 }

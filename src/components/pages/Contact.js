@@ -7,9 +7,9 @@ const styles = {
     marginTop: '100px',
     width: '80%',
     border: '0px',
-    backgroundColor: 'transparent',
+    // backgroundColor: 'transparent',
     filter: 'opacity(0.95)',
-    
+    borderRadius: '15px',
   },
   box: {
 display: 'flex',
