@@ -54,37 +54,37 @@ export default function Contact() {
     <section style={styles.card} className='card mx-auto bg-none rounded-lg'>
    
       <div style={styles.box}>
-    <div class="col-lg-6 d-flex align-items-stretch">
-<div class="info-wrap p-4 w-100 infobackground">
-<div class="dbox w-100 d-flex align-items-start">
-<div class="icon d-flex align-items-center justify-content-center">
-<span class="fa fa-map-marker"></span>
+    <div className="col-lg-6 d-flex align-items-stretch">
+<div className="info-wrap p-4 w-100 infobackground">
+<div className="dbox w-100 d-flex align-items-start">
+<div className="icon d-flex align-items-center justify-content-center">
+<span className="fa fa-map-marker"></span>
 </div>
-<div class="text pl-4">
+<div className="text pl-4">
 <p><span>Address:</span> Minneapolis, Minnesota</p>
 </div>
 </div>
-<div class="dbox w-100 d-flex align-items-start">
-<div class="icon d-flex align-items-center justify-content-center">
-<span class="fa fa-phone"></span>
+<div className="dbox w-100 d-flex align-items-start">
+<div className="icon d-flex align-items-center justify-content-center">
+<span className="fa fa-phone"></span>
 </div>
-<div class="text pl-4">
+<div className="text pl-4">
 <p><span>Phone:</span> <a href="tel://1234567920">+(612) 836-7123</a></p>
 </div>
 </div>
-<div class="dbox w-100 d-flex align-items-start">
-<div class="icon d-flex align-items-center justify-content-center">
-<span class="fa fa-paper-plane"></span>
+<div className="dbox w-100 d-flex align-items-start">
+<div className="icon d-flex align-items-center justify-content-center">
+<span className="fa fa-paper-plane"></span>
 </div>
-<div class="text pl-4">
+<div className="text pl-4">
 <p><span>Email:</span> <a href="mailto:info@yoursite.com">abduljabar.jobs@gmail.com</a></p>
 </div>
 </div>
-<div class="dbox w-100 d-flex align-items-start">
-<div class="icon d-flex align-items-center justify-content-center">
-<span class="fa fa-globe"></span>
+<div className="dbox w-100 d-flex align-items-start">
+<div className="icon d-flex align-items-center justify-content-center">
+<span className="fa fa-globe"></span>
 </div>
-<div class="text pl-4">
+<div className="text pl-4">
 <p><span>Website</span> <a href="/react-portfolio/resume">Resume</a></p>
 </div>
 </div>
@@ -109,7 +109,7 @@ export default function Contact() {
                   <div className="validation"></div>
                 </div>
                 <div className="form-group">
-                  <textarea className="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
+                  <textarea className="form-control" name="message" rows="5" data-rule="required" data-msg="Please leave a messege" placeholder="Message" required></textarea>
                   <div className="validation"></div>
                 </div>
                 <div>
@@ -133,7 +133,7 @@ export default function Contact() {
                       } else if (!isValidEmail(email)) {
                         emailValid = false;
                         control.className = 'form-control is-invalid'
-                        document.querySelector('.valid').textContent = 'Invalid Email :{';
+                        document.querySelector('.valid').textContent = 'Invalid Email 👎';
                       } else {
                         control.className = 'form-control is-valid'
                       }
@@ -144,7 +144,7 @@ export default function Contact() {
                       document.getElementById('sendmessage').style.display = "block"
                       document.getElementById('formcard').style.display = 'none'
                     } else if (!allValid) {
-                      document.querySelector('.valid').textContent = 'Complete form now!!!';
+                      document.querySelector('.valid').textContent = 'Form Incomplete 😔';
                     } else if (!emailValid) {
                       formControls.forEach((control) => {
                         control.className = 'form-control is-valid'
