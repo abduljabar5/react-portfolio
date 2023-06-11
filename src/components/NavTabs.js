@@ -1,8 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Offcanvas, Navbar, Nav, Button } from 'react-bootstrap';
 
 import { Link } from 'react-router-dom';
 import menu from '../images/navbutton.svg'
 function NavTabs({ currentPage, handlePageChange }) {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
+  const handlePageChangeAndClose = (page) => {
+    handlePageChange(page);
+    handleClose();
+  };
   useEffect(() => {
     const navbar = document.querySelector('.navigationbar');
     const textcolor = document.getElementById('textcolor');
@@ -35,9 +44,9 @@ function NavTabs({ currentPage, handlePageChange }) {
         <div id="logo" className="pull-left">
            <h4><a to="#hero">Abduljabar</a> </h4>
        </div>
-          <a className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
-            aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation"><img className='navbutton' src={menu}></img>
-           </a>
+       <Button className="navbar-toggler" onClick={handleShow}>
+          <img className='navbutton' src={menu} />
+        </Button>
           <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="nav-menu">
           <li className="nav-item">
@@ -85,49 +94,44 @@ function NavTabs({ currentPage, handlePageChange }) {
           </div>
        
       </nav>
-      <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
-        <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasNavLabel">Menu</h5>
-          <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div className="offcanvas-body">
-          <div className="navbar-nav">
-          <a
-          href="#about"
-          onClick={() => handlePageChange('About')}
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'About' ? 'nav-link nav-link text-center active text-center' : 'nav-link nav-link text-center text-center'}
-        >
-          Home
-        </a>  
-        <a
-          href="#Portfolio"
-          onClick={() => handlePageChange('Portfolio')}
-          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Portfolio' ? 'nav-link nav-link text-center active text-center' : 'nav-link nav-link text-center text-center'}
-        >
-          Projects
-        </a>     
-        <a
-          href="#contact"
-          onClick={() => handlePageChange('Contact')}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Contact' ? 'nav-link nav-link text-center active text-center' : 'nav-link nav-link text-center text-center'}
-        >
-          Contact
-        </a>     
-        <a
-          href="#Resume"
-          onClick={() => handlePageChange('Resume')}
-          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Resume' ? 'nav-link nav-link text-center active text-center' : 'nav-link nav-link text-center text-center'}
-        >
-          Resume
-        </a>
-        </div>
-      </div>
-      </div>
+      <Offcanvas show={show} onHide={handleClose} placement="end" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Menu</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+  <Nav className="navbar-nav">
+    <Nav.Link
+      href="#about"
+      onClick={() => handlePageChangeAndClose('About')}
+      className={currentPage === 'About' ? 'nav-link text-center active text-center' : 'nav-link text-center text-center'}
+    >
+      Home
+    </Nav.Link>
+    <Nav.Link
+      href="#Portfolio"
+      onClick={() => handlePageChangeAndClose('Portfolio')}
+      className={currentPage === 'Portfolio' ? 'nav-link text-center active text-center' : 'nav-link text-center text-center'}
+    >
+      Projects
+    </Nav.Link>
+    <Nav.Link
+      href="#contact"
+      onClick={() => handlePageChangeAndClose('Contact')}
+      className={currentPage === 'Contact' ? 'nav-link text-center active text-center' : 'nav-link text-center text-center'}
+    >
+      Contact
+    </Nav.Link>
+    <Nav.Link
+      href="#Resume"
+      onClick={() => handlePageChangeAndClose('Resume')}
+      className={currentPage === 'Resume' ? 'nav-link text-center active text-center' : 'nav-link text-center text-center'}
+    >
+      Resume
+    </Nav.Link>
+  </Nav>
+</Offcanvas.Body>
+
+      </Offcanvas>
       </main>
   );
 }

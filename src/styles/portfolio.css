@@ -114,11 +114,6 @@ display: none !important;
     background-size: cover;
   }
   
-  @media (min-width: 1024px) {
-    #hero {
-      background-attachment: fixed;
-    }
-  }
   
   #hero .hero-logo {
     margin: 20px auto;
@@ -669,3 +664,4 @@ width: 100%;
     line-height: 24px;
     text-align: center!important;
   }
+  
