@@ -69,8 +69,7 @@ display: none !important;
     list-style: circle;
 }
 .download{
-    margin-left: 420px;
-    display: inline;
+    margin-left: auto;
     
 }
 .icon{
@@ -252,11 +251,14 @@ display: none !important;
     background: url(../images/4k_dark_light_colorful_nature_wallpaper_uhd_by_skullbreaker000_dejx2to-fullview.jpg);
   }
   .project1{
-    background: url(../images/project2.png);
+    background: url(../images/popcorn2.0.png);
   }
   .project2{
     background: url(../images/ttcsscreen.png);
   }
+.project3{
+  background: url(../images/project2.png);
+}
   @media (min-width: 1024px) {
     .project1
     {

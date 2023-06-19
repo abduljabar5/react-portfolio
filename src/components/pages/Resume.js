@@ -1,6 +1,6 @@
 import React from 'react';
 import icon from '../../images/download.svg';
-import resumeUrl from '../../images/Resume.pdf'
+import resumeUrl from '../../images/finalresume.pdf'
 export default function Resume() {
 
   return (
