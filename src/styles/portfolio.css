@@ -522,7 +522,7 @@ width: 100%;
   }
   #logo h4 a{
    font-family: 'Arizonia', cursive; 
-   color: gold; 
+   color: rgb(255, 255, 255); 
    text-decoration: none; 
    size: 15px;
    margin: 10px 50px;
@@ -686,4 +686,9 @@ width: 100%;
 .image-transition:hover {
     transform: scale(1.1);
     opacity: 0.8;
+}
+.videoplay{
+  width:"640" !important;
+  height:"336" !important;
+
 }

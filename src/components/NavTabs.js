@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Offcanvas, Navbar, Nav, Button } from 'react-bootstrap';
 import resumeUrl from '../images/Resume-v2.docx.pdf'
+import { CiMenuBurger } from "react-icons/ci";
 
 import { Link } from 'react-router-dom';
-import menu from '../images/navbutton.svg'
+import menu from '../images/circlemenu.png'
 function NavTabs({ currentPage, handlePageChange }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -45,8 +46,8 @@ function NavTabs({ currentPage, handlePageChange }) {
         <div id="logo" className="pull-left">
            <h4><a to="#hero">Abduljabar</a> </h4>
        </div>
-       <Button className="navbar-toggler" onClick={handleShow}>
-          <img className='navbutton' src={menu} />
+       <Button className="navbar-toggler p-none bg-green hover:bg-none"  onClick={handleShow}>
+          <img className='navbutton' style={{backgroundColor: 'white', borderRadius:'100%'}} src={menu} />
         </Button>
           <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="nav-menu">
@@ -108,7 +109,7 @@ function NavTabs({ currentPage, handlePageChange }) {
       About
     </Nav.Link>
     <Nav.Link
-      href="#Portfolio"
+      href="#projects"
       onClick={() => handlePageChangeAndClose('Portfolio')}
       className='nav-link text-center text-center'
     >

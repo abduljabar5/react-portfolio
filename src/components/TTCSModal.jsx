@@ -1,4 +1,5 @@
 import React from 'react';
+import ttcsVideo from '../images/ttcs.webm'
 
 const ModalComponent = () => {
   return (
@@ -9,9 +10,10 @@ const ModalComponent = () => {
               <h1 className="modal-title fs-5 ms-auto" id="exampleModalLabel2"> Totaltowncarservice</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div className="m-auto py-1">
-              <iframe src="https://drive.google.com/file/d/118XbYPiIxCvO2VccBhBWVThvlsBn5r-D/preview" preload="auto" width="640" height="480"></iframe>
-            </div>
+            <video controls preload="auto">
+              <source src={ttcsVideo} type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
             <div className="modal-footer">
               <div className="modal-dialog modal-dialog-scrollable">
                 <h1 className='text-center'>TTCS</h1>

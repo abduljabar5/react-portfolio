@@ -33,7 +33,7 @@ const TechnologySection = () => (
     <div className="container technology">
       <div className="row">
         <div className="col-md-12">
-          <h3 data-aos="fade-left" className="section-title">Technologies</h3>
+          <h3 data-aos="flip-up" className="section-title">Technologies</h3>
           <div className="section-title-divider"></div>
         </div>
       </div>

@@ -15,7 +15,7 @@ function Portfolio() {
       <div className="container wow fadeInUp">
         <div className="row">
           <div className="col-md-12">
-            <h3 data-aos="zoom-out-down" className="section-title">Projects</h3>
+            <h3 data-aos="zoom-in" className="section-title">Projects</h3>
             <div className="section-title-divider"></div>
             <p className="section-description">Full Stack</p>
           </div>
