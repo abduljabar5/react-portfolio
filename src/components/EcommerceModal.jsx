@@ -11,7 +11,10 @@ const EcommerceProjectModal = () => {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div className="m-auto py-1">
-          <iframe src={ecomVideo} preload="auto" width="640" height="336"></iframe>
+          <video width="640" height="336" controls preload="auto">
+              <source src={ecomVideo} type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="modal-footer">
             <div className="modal-dialog modal-dialog-scrollable">
