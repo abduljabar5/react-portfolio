@@ -86,7 +86,7 @@ display: none !important;
         width: 100%;
     }
 }
-.infobackground{
+/* .infobackground{
     background-image: url(../images/infobackground.jpeg);
     background-attachment: fixed;
     background-position: center center;
@@ -98,7 +98,7 @@ display: none !important;
     color: rgb(251 251 251);
     filter: brightness(0.5);
     border-radius: 15px;
-}
+} */
 /*--------------------------------------------------------------
 # Welcome
 --------------------------------------------------------------*/
@@ -177,9 +177,6 @@ display: none !important;
   }
   #hero .actions a:hover{
     scale: 1.5;
-    padding: 10px;
-      background-color: beige;
-  
   }
   #hero .btn-get-started {
     background: #03C4EB;
@@ -247,18 +244,21 @@ display: none !important;
   #about .about-img img {
     max-width: 100%;
   }
-  .portfolio-item{
-    background: url(../images/4k_dark_light_colorful_nature_wallpaper_uhd_by_skullbreaker000_dejx2to-fullview.jpg);
-  }
   .project1{
     background: url(../images/popcorn2.0.png);
   }
   .project2{
     background: url(../images/ttcsscreen.png);
   }
-.project3{
-  background: url(../images/project2.png);
-}
+  .project3{
+    background: url(../images/project2.png);
+  }
+  .ecommerce{
+    background: url(../images/ecommerce-main.png);
+  }
+  .linkafy{
+    background: url(../images/Linkafy.png);
+  }
   @media (min-width: 1024px) {
     .project1
     {
@@ -266,7 +266,7 @@ display: none !important;
     }
   }
   
-  #portfolio {
+  /* #projects {
     
     background-image: url(../images/pexels-ann-h-1762851.jpg);
     background-attachment: fixed;
@@ -275,8 +275,11 @@ display: none !important;
     background-repeat: no-repeat;
   padding: 80px 0;
   padding-top: 200px;
-}
-#contact {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+    opacity: 0.8;
+} */
+/* #contact {
     
     background-image: url(../images/infobackground.jpeg);
     background-attachment: fixed;
@@ -285,7 +288,7 @@ display: none !important;
     background-repeat: no-repeat;
   padding: 80px 0;
   padding-top: 200px;
-}
+} */
 @media (min-width: 768px) {
 .lessimportent{
     width: 50%;
@@ -294,7 +297,7 @@ display: none !important;
 .main-project{
 width: 100%;
 }
-#portfolio .portfolio-item {
+#projects .portfolio-item {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -307,7 +310,7 @@ width: 100%;
   border-radius: 15px;
 }
 
-#portfolio .portfolio-item .details {
+#projects .portfolio-item .details {
   height: 260px;
   background: #100f0f;
   display: table-cell;
@@ -321,7 +324,7 @@ width: 100%;
     justify-content: center;
 }
 
-#portfolio .portfolio-item .details h4 {
+#projects .portfolio-item .details h4 {
   font-size: 16px;
   transition: transform 0.3s, opacity 0.3s;
   transform: translate3d(0, -15px, 0);
@@ -329,21 +332,21 @@ width: 100%;
   color: #ffffff;
 }
 
-#portfolio .portfolio-item .details   #code{
+#projects .portfolio-item .details   #code{
   display: block;
   color: #666666;
   font-size: 13px;
   transition: transform 0.3s, opacity 0.3s;
   transform: translate3d(-15px, 0, 0);
 }
-#portfolio .portfolio-item .details  #live {
+#projects .portfolio-item .details  #live {
     display: block;
     color: #666666;
     font-size: 13px;
     transition: transform 0.3s, opacity 0.3s;
     transform: translate3d(15px, 0, 0);
   }
-  #portfolio .portfolio-item .details  #preview {
+  #projects .portfolio-item .details  #preview {
     display: block;
     color: #666666;
     font-size: 13px;
@@ -352,21 +355,21 @@ width: 100%;
     opacity: 0;
   }
 
-#portfolio .portfolio-item:hover .details {
+#projects .portfolio-item:hover .details {
   opacity: 0.8;
 }
 
-#portfolio .portfolio-item:hover .details h4 {
+#projects .portfolio-item:hover .details h4 {
   transform: translate3d(0, 0, 0);
 }
 
-#portfolio .portfolio-item:hover .details  #live{
+#projects .portfolio-item:hover .details  #live{
   transform: translate3d(0, 0, 0);
 }
-#portfolio .portfolio-item:hover .details  #code{
+#projects .portfolio-item:hover .details  #code{
     transform: translate3d(0, 0, 0);
   }
-  #portfolio .portfolio-item:hover .details  #preview{
+  #projects .portfolio-item:hover .details  #preview{
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
@@ -406,6 +409,16 @@ width: 100%;
 .navbutton{
     width: 35px;
 }
+.navbarLinks{
+  color: lightgray;
+  
+}
+.navbarLinks:hover {
+  color: lightyellow;
+  transform: scale(1.3);
+  transition: color 0.6s ease-out, transform 0.6s ease-out;
+}
+
 .navbarcontainer{
     display: flex;
     justify-content: space-between !important;
@@ -666,4 +679,11 @@ width: 100%;
     line-height: 24px;
     text-align: center!important;
   }
-  
+  .image-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+.image-transition:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
